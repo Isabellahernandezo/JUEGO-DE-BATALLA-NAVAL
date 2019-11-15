@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+	<title>ENTRAR</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style_orgbarcos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  </head>
+
+
+  <body>
+    <div id="contenedor">
+
+      <div id="cabecera">
+	      <center>
+        <h1 id=Titulo>{{datos.usuario}} ORGANIZA TUS BARCOS</h1>
+	      </center>
+      </div>
+      
+      <div id="registrarse">
+	      <center>
+        <div class="tablero1">
+                <table  border="1">
+                  {% for columna in datos.MiTablero%}
+                  <tr>
+                     {% for fila in columna %}
+                       {% if fila == "X"%}
+                         <td>🔴</td>
+                       {% elif fila == "W"%}
+                         <td>⚪</td>
+                       {% elif fila == "Y"%}
+                         <td>🔵</td>
+                       {% elif fila == "Z" %}
+                         <td>🔶</td>
+                       {% elif fila == "M" %}
+                         <td>🔷</td>
+                       {% elif fila == 0 %}
+                          <td>♒</td>
+                        {% else %}
+                        <td>{{fila}}</td>
+                        {% endif%}
+                     {% endfor %}
+                  <tr>
+                  {% endfor %}
+                </table>
+        </div>
+        </center>
+      </div>
+      
+      <div id="iniciarsesion">
+        <center>
+        <br/><br/><h1>DIGITE LA COORDENADA</h1>
+        
+        <br/><div class="Barcos">
+                <p> Carrier = 🔴🔴🔴🔴🔴  </p>
+                <p> Blattleship = ⚪⚪⚪⚪ </p>
+                <p> Submarine = 🔵🔵🔵     </p>
+                <p> Cruiser = 🔶🔶🔶       </p>
+                <p> Destroyer = 🔷🔷       </p>
+        </div>
+        <div class="Direcciones">
+            <p>Direcciones </p>
+            <p>Arriba = 1 </p>
+            <p>Abajo = 2</p>
+            <p>Derecha = 3 </p>
+            <p>Izquierda = 4</p>
+        </div>
+        
+        <form action="{{url_for('organizarbarcos')}}" method='POST'>
+          <div class="input_coordenada"><br/>
+		      <input type="text" placeholder="Digite la coordenada" name="coordenada" required>
+          </div>
+
+          <div class="input_direccion"><br/>
+          <input type="text" placeholder="Digite la direccion" name="direccion" required>
+          </div><br/>
+          
+          <div class="Ubicar"><br/>
+		      <input type="submit" name="agregar" value="UBICAR">
+          </div>
+        </form>
+        <br/><a href="../cargarArchivo/" >CARGAR ARCHIVO</a>
+
+	      </center>
+
+      </div>
+    
+
+
+      <div id="pie">
+        
+      </div>
+    </div>
+  </body>
+</html>

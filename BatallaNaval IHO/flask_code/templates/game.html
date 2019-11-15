@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+	  <title>BATALLA NAVAL</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style_game.css">
+  </head>
+
+
+  <body background="../static/imagenes/barcos_game2.jpg">
+    <div id="contenedor">
+
+      <div id="cabecera" >
+	    <center>
+        <h1>BATALLA NAVAL</h1>
+	    </center>
+      </div>
+     
+
+        <div id="izquierda">
+            <div class="mis_puntos">
+              <h2>Mi tablero ({{datos.usuario}})<br>
+                Puntos: {{datos.MisPuntos}}<br>
+                Partidas Ganadas: {{datos.partidasPropia}}<br>
+                Partidas Perdidas: {{datos.Partidas_perdidas_propia}}<br>
+                Disparos para Ganar: {{datos.cant_disparos_ganar_mio}}</h2>
+              </div>
+              
+                        <div class="tablero1">
+                                <table  border="1">
+                                  {% for columna in datos.MiTablero%}
+                                  <tr>
+                                     {% for fila in columna %}
+                                       {% if fila == "X"%}
+                                          <td>🔴</td>
+                                       {% elif fila == "W"%}
+                                          <td>⚪</td>
+                                       {% elif fila == "Y"%}
+                                          <td>🔵</td>
+                                       {% elif fila == "Z" %}
+                                          <td>🔶</td>
+                                       {% elif fila == "M" %}
+                                          <td>🔷</td>
+                                       {% elif fila == 0 %}
+                                          <td>♒</td>
+                                        {% elif fila == "P" %}
+                                          <td>🌟</td>
+                                        {% elif fila == "K" %}
+                                          <td>🌊</td>
+                                        {% else %}
+                                        <td>{{fila}}</td>
+                                        {% endif%}
+                                     {% endfor %}
+                                  <tr>
+                                  {% endfor %}
+                                </table>
+                        </div>
+                        </center>
+                <center>
+
+                  {%if datos.cant_disparos_ganar_mio <=17 and datos.cant_disparos_ganar_rival <= 17%}
+
+                  
+                  <div class="enviarCohete">
+                    <center><form class="" action="{{url_for('lanzarCohete')}}" method="post">
+                      <input class="lanzarCohete_dis2" type="text" name="coordenada" value="" required><br><br>
+                      <input class="lanzarCohete_dis3" type="submit" name="" value="Lanzar cohete">
+                    </form></center>
+                  </div>
+                {% endif %}
+                </div>
+
+
+
+                    <div class="Barcos">
+                      <p>Carrier = 🔴🔴🔴🔴🔴 </p>
+                      <p>Blattleship = ⚪⚪⚪⚪</p>
+                      <p>Submarine = 🔵🔵🔵 </p>
+                      <p>Cruiser = 🔶🔶🔶</p>
+                      <p>Destroyer = 🔷🔷</p>
+                    </div>
+                    <h4>PARTIDA N°{{datos.Numeropartida}}</h4>
+                    <h6>DIGITE LA COORDENADA</h6>
+                </center>
+
+                <center>
+                    <a href="../cerrarSesion/">REGRESAR</a> 
+                </center>
+            
+
+        </div>
+ 
+
+      
+        <div id="derecha">
+         <!--TABLERO RIVAL -->
+      <div class="puntos_rival">
+        <h2>Tablero Rival (Maquina)<br>
+        <br/>
+          Disparos para Ganar: {{datos.cant_disparos_ganar_rival}}
+          </h2>
+        </div>
+        <div class="tablero2">
+          <table  border="1">
+            {% for columna in datos.TableroRival %}
+            <tr>
+               {% for fila in columna %}
+                 {% if fila == "X"%}
+                    <td>🔴</td>
+                 {% elif fila == "Y"%}
+                    <td>⚪</td>
+                 {% elif fila == "Z"%}
+                    <td>🔵</td>
+                 {% elif fila == "W" %}
+                    <td>🔶</td>
+                 {% elif fila == "M" %}
+                    <td>🔷</td>
+                 {% elif fila == 0 %}
+                    <td>♒</td>
+                  {% elif fila == "P" %}
+                    <td>🌟</td>
+                  {% elif fila == "K" %}
+                    <td>🌊</td>
+                  {% else %}
+                  <td>{{fila}}</td>
+                  {% endif%}
+               {% endfor %}
+            <tr>
+            {% endfor %}
+          </table>
+  
+  
+      </div>
+
+
+    </div>
+  </body>
+</html>

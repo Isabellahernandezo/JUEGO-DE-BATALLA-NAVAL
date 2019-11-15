@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<title>BATALLA NAVAL</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style_menujugador.css">
+</head>
+
+<body background="../static/imagenes/batalla.jpg">
+
+	<h1>BIENVENID@ {{datos.usuario}}</h1>
+	<br/><br/><br/>
+	<center>
+
+	<form action="{{url_for('organizarbarcos')}}" method='GET'>
+		
+			<input class="iniciarp" type="submit" name="iniciarpartida" value="INICIAR PARTIDA">
+	</form>
+
+	<br/><br/><br/>
+	<a href="../ranking/">RANKING</a>
+	<br/><br/><br/><br/><br/>
+	<a href="../instruccioness/">INSTRUCCIONES</a>
+	<br/><br/><br/><br/><br/>
+	<a href="../salirdeljuego/">CERRAR SESION</a>
+	<br/><br/><br/>
+	</center>
+	
+	
+        
+</body>
+
+
+</html>

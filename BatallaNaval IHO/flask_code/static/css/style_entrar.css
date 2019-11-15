@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+    color:#0f0;
+    font-size:60px;
+}
+
+.fa-user{
+    color: #22309F;
+}
+
+.fa-lock{
+    color: #22309F;
+}
+
+body {
+    background:#eee;
+    font-family:verdana;
+}
+h1 {
+    font-family:Verdana;
+    font-size:25px;
+    font-weight:bold;
+    color:#22309F;
+}
+  
+p {
+    font-family:Verdana;
+    font-size:30px;
+    font-weight:bold;
+    color:#0489B1;
+}
+ 
+#cabecera {
+    font-family:Verdana;
+    font-size:80px;
+    font-weight:bold;
+    color:#B6CFF6;
+    background-color:white;
+    padding:16px;
+    border-style: outset;
+}
+
+#contenedor {
+    margin:0 auto;
+    width:1300px;
+}
+
+#iniciarsesion {
+   
+    background-color:#CADAF0;
+    float:left;
+    height:575px;
+    width:670px;
+ 
+}
+
+#registrarse {
+    background-color:#ABC3E7;
+    float:left;
+    height:575px;
+    width:630px;
+}
+
+
+
+.label_usuario{
+    font-family:Verdana;
+    font-size:20px;
+}
+
+.label_contraseña{
+    font-family:Verdana;
+    font-size:20px;
+}
+
+.input_usuario > input{
+    width: 50%;
+    height: 35px;
+    font-size: 140%;
+    text-align: center;
+    font-family: Verdana;
+}
+
+.input_contraseña > input{
+    width: 50%;
+    height: 35px;
+    font-size: 140%;
+    text-align: center;
+}
+
+
+.boton_submit1 > input{
+    border: none;
+    width: 35%;
+    height: 30%;
+    font-family: Verdana;
+    font-weight:bold;
+    font: bold 23px Verdana;
+    text-decoration:none;
+    color:#0489B1;
+    border:4px solid #f2f2f2;
+    padding:10px 20px 10px 20px;
+    background:white;
+    border-radius:5px;
+    transition:background 1s,color 1s;
+}
+
+
+.boton_submit1 > input:hover{
+    background:#f2f2f2;
+    color:#B6CFF6;
+}
+
+.boton_submit2 > input{
+    border: none;
+    width: 35%;
+    height: 30%;
+
+    font-family: Verdana;
+    font-weight:bold;
+    font: bold 23px Verdana;
+    text-decoration:none;
+    color:#0489B1;
+    border:4px solid #f2f2f2;
+    padding:10px 20px 10px 20px;
+    background:white;
+    border-radius:5px;
+    transition:background 1s,color 1s;
+}
+
+
+.boton_submit2 > input:hover{
+    background:#f2f2f2;
+    color:#B6CFF6;
+}

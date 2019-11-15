@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+	<title>BATALLA NAVAL</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style_entrar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  </head>
+
+
+  <body>
+    <div id="contenedor">
+      <div id="cabecera" >
+	<center>
+        <p>BATALLA NAVAL</p>
+	</center>
+
+      </div>
+      <form action="{{url_for('registro')}}" method='POST'>
+
+      <div id="registrarse">
+	<center>
+			<br>
+        <br/><h1>REGISTRARSE</h1>
+	<br/><br/><br/><br/><br/>
+
+	<div class="label_usuario">
+		<label>Digite su usuario:</label>
+	</div>
+
+        <div class="input_usuario"><br/>
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+		<input type="text" placeholder="Nickgame" name="username2" required>
+	</div>
+
+	<div class="label_contraseña"><br/><br/>
+		<label>Digite  su contraseña:</label>
+	</div><br/>
+
+	<div class="input_contraseña">
+                <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+		<input type="password" placeholder="Contraseña" name="password2"  required>
+	</div><br/><br>
+
+	<div class="boton_submit2">
+                <input type="submit" name="registrarse" value="Registrarse" >
+                
+	</div>
+        </center>
+        
+      </div>
+      </form>
+
+      <form action="{{url_for('login')}}" method='POST'>
+      <div id="iniciarsesion">
+        <center><br>
+        <br/><h1>INICIAR SESION</h1><br/><br/><br/><br/><br/>
+
+
+	<div class="label_usuario">
+		<label>Digite su usuario:</label>
+	</div>
+
+        <div class="input_usuario"><br/>
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+		<input type="text" placeholder="Nickgame"  name="username1" required>
+	</div>
+
+	<div class="label_contraseña"><br/><br/>
+		<label>Digite  su contraseña:</label>
+	</div><br/>
+
+	<div class="input_contraseña">
+                <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+		<input type="password" placeholder="Contraseña" name="password1" required >
+	</div>
+        
+	<div class="boton_submit1"><br/><br>
+		<input type="submit" name="iniciar_sesion" value="Iniciar sesion">
+	</div>
+	</center>
+
+      </div>
+        </form>
+
+
+
+    </div>
+  </body>
+</html>

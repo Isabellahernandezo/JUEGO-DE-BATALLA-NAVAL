@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RANKING</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style_ranking.css">
+</head>
+<body  background="../static/imagenes/batalla.jpg">
+    <center>
+            <div class="Disenio_rank">
+                    <p>RANKING</p>
+                  </div>
+                  <div class="ranking_2">
+                    <table >
+                   
+                        {% for nick in datos.user_ranking %}
+                          <tr>
+                            <td>{{nick}}</td
+                          </tr>
+                        {% endfor %}
+                    </table>
+                 </div>
+                 
+		          <a href="../regresar1/">REGRESAR</a>
+
+    </center>
+
+    
+</body>
+</html>
